@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>forum</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+ 
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GlobalServlet</servlet-name>
+    <servlet-class>forum.global.controller.GlobalServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>TeacherServlet</servlet-name>
+    <servlet-class>forum.teacher.controller.TeacherServlet</servlet-class>
+     <init-param> 
+            <param-name>filepath</param-name> 
+            <param-value>uploadFile</param-value> 
+        </init-param> 
+        <init-param> 
+            <param-name>temppath</param-name> 
+            <param-value>temp</param-value> 
+        </init-param> 
+  </servlet>
+  <servlet>
+    <servlet-name>TeacherUploadServlet</servlet-name>
+    <servlet-class>forum.teacher.controller.TeacherUploadServlet</servlet-class>
+  </servlet>
+  <servlet><!-- 教师页面 -->
+    <servlet-name>teacherIndexServlet</servlet-name>
+    <jsp-file>/view.teacher/post.jsp</jsp-file>
+  </servlet>
+  <servlet><!-- 上传结果页面 -->
+    <servlet-name>uploadRes</servlet-name>
+    <jsp-file>/view.teacher/uploadRes.jsp</jsp-file>
+  </servlet>
+   <servlet><!-- 上传结果页面 -->
+    <servlet-name>releasehomeRes</servlet-name>
+    <jsp-file>/view.teacher/releasehomeRes.jsp</jsp-file>
+  </servlet>
+  
+  
+  
+<servlet>
+    <servlet-name>StudentUploadServlet</servlet-name>
+    <servlet-class>forum.student.controller.StudentUploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StudentDownloadServlet</servlet-name>
+    <servlet-class>forum.student.controller.StudentDownloadServlet</servlet-class>
+  </servlet>
+
+  
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UncheckedInvitationMgrServlet</servlet-name>
+    <servlet-class>forum.admin.controller.UncheckedInvitationMgrServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogicMgrServlet</servlet-name>
+    <servlet-class>forum.admin.controller.LogicMgrServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>StudentMgrServlet</servlet-name>
+    <servlet-class>forum.admin.controller.StudentMgrServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckedInvitationMgrServlet</servlet-name>
+    <servlet-class>forum.admin.controller.CheckedInvitationMgrServlet</servlet-class>
+  </servlet>
+
+  
+  
+  
+  <servlet-mapping>
+    <servlet-name>UncheckedInvitationMgrServlet</servlet-name>
+    <url-pattern>/uncheckedInvitationMgrChen</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogicMgrServlet</servlet-name>
+    <url-pattern>/logicMgr</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentMgrServlet</servlet-name>
+    <url-pattern>/studentMgrChen</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckedInvitationMgrServlet</servlet-name>
+    <url-pattern>/checkedInvitationMgrChen</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet-mapping>
+  <servlet-name>GlobalServlet</servlet-name>
+  <url-pattern>/globalServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TeacherServlet</servlet-name>
+    <url-pattern>/TeacherServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>teacherIndexServlet</servlet-name>
+    <url-pattern>/teacherIndex</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TeacherUploadServlet</servlet-name>
+    <url-pattern>/TeacherUploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>uploadRes</servlet-name>
+    <url-pattern>/uploadRes</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>releasehomeRes</servlet-name>
+    <url-pattern>/teacher/releasehomeRes</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet-mapping>
+    <servlet-name>StudentUploadServlet</servlet-name>
+    <url-pattern>/StudentUploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StudentDownloadServlet</servlet-name>
+    <url-pattern>/StudentDownloadServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+<context-param>  
+<param-name>filepath</param-name>  
+<param-value>uploadFile</param-value>
+ </context-param>
+ <context-param>  
+<param-name>temppath</param-name>  
+<param-value>temp</param-value>  
+ </context-param>
+
+
+  
+</web-app>

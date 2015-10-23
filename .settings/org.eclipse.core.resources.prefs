@@ -1,0 +1,7 @@
+#Mon Jun 22 16:41:29 CST 2015
+eclipse.preferences.version=1
+encoding//WebRoot/view.student/index.jsp=UTF-8
+encoding//WebRoot/view.student/studentDownload.jsp=UTF-8
+encoding//src/forum/global/controller/GlobalServlet.java=UTF-8
+encoding//src/forum/teacher/controller/ReleasehomeworkServlet.java=UTF-8
+encoding//src/forum/teacher/controller/TeacherUploadServlet.java=UTF-8
